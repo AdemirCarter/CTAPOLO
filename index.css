@@ -1,0 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/vortax');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Titulo do Site*/
+.titulo {
+    background-color: rgb(0, 0, 0);
+    color: #ff0000;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Vortax', sans-serif;
+}
+
+/*Corpo do Site*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #17171b;
+}
+
+/*Barra de Navegação*/
+.navegacao {
+    position: fixed;
+    display: flex;
+    bottom: 0px;
+    background-color: black;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 50px;
+}
+
+.navegacao button {
+    border: none;
+    background: none;
+}
+
+.navegacao button img {
+    width: 25px;
+}
+
+.navegacao .select img {
+    width: 35px;
+    animation-name: Selected;
+    animation-duration: .6s;
+}
+
+@keyframes Selected {
+    from {
+        width: 25px;
+    }
+
+    to {
+        width: 35px;
+    }
+}
+
+/*Planilhas*/
+.Planilhas {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior:smooth;
+    gap: 10px;
+    width: 80dvw;
+}
+
+.Planilhas div h3 {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*Conteudo da Planilha*/
+.Conteudo {
+    background-color: rgb(0, 0, 0);
+    width: 74dvw;
+    height: 68dvh;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation-name: Conteudo;
+    animation-duration: .8s;
+}
+
+@keyframes Conteudo {
+    from {
+        height: 10dvh;
+    }
+
+    to {
+        height: 68dvh;
+    }
+}
+
+.Conteudo .exercicio {
+    color: white;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.Conteudo .exercicio .infos {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.Conteudo .exercicio .infos input {
+    width: 15dvw;
+    padding: 2px;
+    background-color: #17171b;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/*Salvar Dados*/
+
+.salvar {
+    
+    position: relative;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-size: 15px;
+    width: 35vw;
+    font-family: 'Suez One', sans-serif;
+    transition: .2s;
+    font-weight: 600;
+}
+
+.salvar:hover {
+    transform: rotate(-5deg);
+}

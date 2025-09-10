@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Treinamento Apolo</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.cdnfonts.com/css/odibee-sans" rel="stylesheet">
+</head>
+<body>
+    <!--Titulo do Site-->
+    <div class="titulo"><p>CT APOLO</p></div>
+
+    <!--Planilhas-->
+    <div class="Planilhas">
+        <div id="PlanilhaA">
+            <h3>Planilha A</h3>
+
+            <div class="Conteudo" id="ConteudoA">
+                <button class="salvar" id="salvarA">Salvar Dados</button>
+            </div>
+        </div>
+
+        <div id="PlanilhaB">
+            <h3>Planilha B</h3>
+
+            <div class="Conteudo" id="ConteudoB">
+                <button class="salvar" id="salvarB">Salvar Dados</button>
+                
+            </div>
+        </div>
+
+        <div id="PlanilhaC">
+            <h3>Planilha C</h3>
+
+            <div class="Conteudo" id="ConteudoC">
+                <button class="salvar" id="salvarC">Salvar Dados</button>
+                
+            </div>
+        </div>
+
+        <div id="PlanilhaD">
+            <h3>Planilha D</h3>
+
+            <div class="Conteudo" id="ConteudoD">
+                <button class="salvar" id="salvarD">Salvar Dados</button>
+                
+            </div>
+        </div>
+
+        <div id="PlanilhE">
+            <h3>Planilha E</h3>
+
+            <div class="Conteudo" id="ConteudoE">
+                <button class="salvar" id="salvarE">Salvar Dados</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--Barra de Navegação-->
+    <div class="navegacao">
+        <button class="select" id="JanelaTreino">
+            <img src="https://img.icons8.com/?size=100&id=9784&format=png&color=ff0000" alt="">
+        </button>
+        <button id="JanelaCuriosidade">
+            <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff" alt="">
+        </button>
+        <button id="JanelaPerfil">
+            <img src="https://img.icons8.com/?size=100&id=60655&format=png&color=ffffff" alt="">
+        </button>
+        <button id="JanelaContato">
+            <img src="https://img.icons8.com/?size=100&id=60963&format=png&color=ffffff" alt="">
+        </button>
+    </div>
+</body>
+
+<script>
+    const nome = "Ademir"
+    const planilhaA = document.querySelector("#ConteudoA")
+    const planilhaB = document.querySelector("#ConteudoB")
+    const planilhaC = document.querySelector("#ConteudoC")
+    const planilhaD = document.querySelector("#ConteudoD")
+    const planilhaE = document.querySelector("#ConteudoE")
+
+    const planos = ["planoA", "planoB"]
+
+    fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+        data[nome].planoA.forEach(exercicio => {
+            const divExercicio = document.createElement("div")
+            divExercicio.className = "exercicio"
+            divExercicio.id = exercicio
+
+            const nomeExercicio = document.createElement("p")
+            nomeExercicio.textContent = exercicio
+
+            const divInput = document.createElement("div")
+            divInput.className = "infos"
+
+            const infoInput = ["peso", "reps", "sets"]
+
+            infoInput.forEach(inputs => {
+                const input = document.createElement("input")
+                input.id = `${inputs}-${exercicio}`
+                input.placeholder = inputs
+                input.value = localStorage.getItem(input.id)
+
+                divInput.append(input)
+            })
+
+            planilhaA.append(divExercicio)
+            divExercicio.append(nomeExercicio)
+            divExercicio.append(divInput)
+            
+        })
+
+        data[nome].planoB.forEach(exercicio => {
+            const divExercicio = document.createElement("div")
+            divExercicio.className = "exercicio"
+            divExercicio.id = exercicio
+
+            const nomeExercicio = document.createElement("p")
+            nomeExercicio.textContent = exercicio
+
+            const divInput = document.createElement("div")
+            divInput.className = "infos"
+
+            const infoInput = ["peso", "reps", "sets"]
+
+            infoInput.forEach(inputs => {
+                const input = document.createElement("input")
+                input.id = `${inputs}-${exercicio}`
+                input.placeholder = inputs
+                input.value = localStorage.getItem(input.id)
+
+                divInput.append(input)
+            })
+
+            planilhaB.append(divExercicio)
+            divExercicio.append(nomeExercicio)
+            divExercicio.append(divInput)
+            
+        })
+
+        data[nome].planoC.forEach(exercicio => {
+            const divExercicio = document.createElement("div")
+            divExercicio.className = "exercicio"
+            divExercicio.id = exercicio
+
+            const nomeExercicio = document.createElement("p")
+            nomeExercicio.textContent = exercicio
+
+            const divInput = document.createElement("div")
+            divInput.className = "infos"
+
+            const infoInput = ["peso", "reps", "sets"]
+
+            infoInput.forEach(inputs => {
+                const input = document.createElement("input")
+                input.id = `${inputs}-${exercicio}`
+                input.placeholder = inputs
+                input.value = localStorage.getItem(input.id)
+
+                divInput.append(input)
+            })
+
+            planilhaC.append(divExercicio)
+            divExercicio.append(nomeExercicio)
+            divExercicio.append(divInput)
+            
+        })
+
+        data[nome].planoD.forEach(exercicio => {
+            const divExercicio = document.createElement("div")
+            divExercicio.className = "exercicio"
+            divExercicio.id = exercicio
+
+            const nomeExercicio = document.createElement("p")
+            nomeExercicio.textContent = exercicio
+
+            const divInput = document.createElement("div")
+            divInput.className = "infos"
+
+            const infoInput = ["peso", "reps", "sets"]
+
+            infoInput.forEach(inputs => {
+                const input = document.createElement("input")
+                input.id = `${inputs}-${exercicio}`
+                input.placeholder = inputs
+                input.value = localStorage.getItem(input.id)
+
+                divInput.append(input)
+            })
+
+            planilhaD.append(divExercicio)
+            divExercicio.append(nomeExercicio)
+            divExercicio.append(divInput)
+            
+        })
+
+        data[nome].planoE.forEach(exercicio => {
+            const divExercicio = document.createElement("div")
+            divExercicio.className = "exercicio"
+            divExercicio.id = exercicio
+
+            const nomeExercicio = document.createElement("p")
+            nomeExercicio.textContent = exercicio
+
+            const divInput = document.createElement("div")
+            divInput.className = "infos"
+
+            const infoInput = ["peso", "reps", "sets"]
+
+            infoInput.forEach(inputs => {
+                const input = document.createElement("input")
+                input.id = `${inputs}-${exercicio}`
+                input.placeholder = inputs
+                input.value = localStorage.getItem(input.id)
+
+                divInput.append(input)
+            })
+
+            planilhaE.append(divExercicio)
+            divExercicio.append(nomeExercicio)
+            divExercicio.append(divInput)
+            
+        })
+    })
+
+    const saveA = document.querySelector("#salvarA")
+    const saveB = document.querySelector("#salvarB")
+    const saveC = document.querySelector("#salvarC")
+    const saveD = document.querySelector("#salvarD")
+    const saveE = document.querySelector("#salvarE")
+
+    function Salvar(classInfo) {
+        const exercicio = classInfo.querySelectorAll(".exercicio")
+
+        exercicio.forEach(exercicios => {
+            const infos = exercicios.querySelectorAll(".infos")
+
+            infos.forEach(elementos => {
+                const input = elementos.querySelectorAll("input")
+
+                input.forEach(inputs => {
+                    localStorage.setItem(inputs.id, inputs.value)
+                })
+            })
+        })
+
+        alert("Dados da planilha salvos com sucesso!")
+        window.location.reload()
+    }
+
+    saveA.addEventListener("click", () => Salvar(planilhaA))
+    saveB.addEventListener("click", () => Salvar(planilhaB))
+    saveC.addEventListener("click", () => Salvar(planilhaC))
+    saveD.addEventListener("click", () => Salvar(planilhaD))
+    saveE.addEventListener("click", () => Salvar(planilhaE))
+</script>
+
+</html>

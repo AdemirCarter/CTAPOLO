@@ -1,0 +1,9 @@
+{
+    "Ademir": {
+        "planoA": ["Supino Reto", "Polia Media", "Supino Inclinado", "Polia Baixa", "Triceps Unilateral", "Elevação Lateral", "Elevação Frontal"],
+        "planoB": ["Puxada Aberta", "Puxada Fechada", "Remada Curvada", "Pulldown", "Rosca Halter", "Posterior Polia", "Rosca Punho"],
+        "planoC": ["Panturrilha Hack", "Agachamento Livre", "Extensora", "Mesa Flexora", "Stiff", "Adutor Polia", "Panturrilha"],
+        "planoD": ["Triceps Uni", "JM Press", "Elevação Lateral", "Rosca Halter", "Supino Reto", "Puxada Fechada", "Rosca Punho"],
+        "planoE": ["Panturrilha Hack", "Mesa Flexora", "Stiff", "Adutor Polia", "Agachamento Livre", "Extensora", "Panturrilha"]
+    }
+}
